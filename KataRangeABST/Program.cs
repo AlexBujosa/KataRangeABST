@@ -19,9 +19,17 @@ namespace KataRangeABST
             ParentesisCerrado = 3
         }
 
-        public static string GetAllPoints()
+        public static string GetAllPoints(int[]numberRange)
         {
-            return "";
+            string allpoint = "{";
+            for(int i = numberRange[0]; i < numberRange[1] - 1; i++)
+            {
+                allpoint += i + ",";
+            }
+            allpoint += (numberRange[1] - 1).ToString() + "}";
+            
+
+            return $"allPoints = {allpoint}";
         }
         public static string endPoints(SymbolOpen Op, SymbolClose Cl, int[]rangeValue)
         {
